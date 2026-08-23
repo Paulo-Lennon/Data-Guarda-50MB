@@ -7,8 +7,17 @@
     <!-- Necessária para mostrar o alerta por cima de outros aplicativos. -->
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
 
-    <!-- Necessária para mostrar acesso ou qual rede está. -->
+    <!-- Permite identificar se o aparelho está em Wi-Fi, dados móveis ou sem rede. -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!-- Necessária para manter o monitoramento ativo em segundo plano. -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <!-- Permissão para o tipo specialUse do Foreground Service. -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
+
+    <!-- Android 13 ou superior: permite mostrar a notificação do monitoramento. -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
 
     <application
         android:allowBackup="true"
@@ -20,10 +29,30 @@
         <activity
             android:name=".MainActivity"
             android:exported="true">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
+
+        <!--
+            Serviço responsável por manter o Data Guard monitorando
+            a conexão e o consumo mesmo com a tela principal fechada.
+        -->
+        <service
+            android:name=".DataGuardService"
+            android:enabled="true"
+            android:exported="false"
+            android:foregroundServiceType="specialUse">
+
+            <property
+                android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
+                android:value="Continuous mobile data usage monitoring requested by the user" />
+
+        </service>
+
     </application>
+
 </manifest>

@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Atenção: Está usando o Wifi !?"
+        android:text="Atenção: Está usando o Wifi ?"
         android:textColor="#B3261E"
         android:textSize="21sp"
         android:textStyle="bold" />
