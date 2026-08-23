@@ -1,0 +1,39 @@
+# Android / Gradle
+.gradle/
+.kotlin/
+build/
+**/build/
+
+# Android Studio
+.idea/
+*.iml
+
+# Configuração local
+local.properties
+
+# APK / App Bundle
+*.apk
+*.aab
+
+# Chaves de assinatura - NUNCA enviar ao GitHub
+*.jks
+*.keystore
+
+# Variáveis e credenciais
+.env
+.env.*
+secrets.properties
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Native build
+.externalNativeBuild/
+.cxx/
+
+# Captures
+captures/
