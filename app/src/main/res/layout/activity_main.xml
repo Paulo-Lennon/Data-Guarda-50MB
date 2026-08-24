@@ -14,7 +14,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Data Guard 150"
+            android:text="Net Save"
             android:textColor="@color/text_dark"
             android:textSize="30sp"
             android:textStyle="bold" />
