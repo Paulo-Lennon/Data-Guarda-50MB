@@ -444,7 +444,7 @@ class DataGuardService : Service() {
             CHANNEL_ID
         )
             .setContentTitle(
-                "Data Guard 150"
+                "Net Save"
             )
             .setContentText(
                 "Monitoramento de dados ativo"
