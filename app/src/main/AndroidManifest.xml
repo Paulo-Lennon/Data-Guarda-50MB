@@ -21,7 +21,7 @@
 
     <application
         android:allowBackup="true"
-        android:label="Data Guard 150"
+        android:label="Net Save"
         android:icon="@mipmap/ic_launcher"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:theme="@style/Theme.DataGuard150">
